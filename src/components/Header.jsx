@@ -1,3 +1,6 @@
-export default function Header({ appName }) {
-    return <h1>{ appName }</h1>
+import { useContext } from "react";
+import { PostsContext } from "../App";
+export default function Header() {
+  const { APP_NAME } = useContext(PostsContext);
+  return <h1>{APP_NAME}</h1>;
 }
